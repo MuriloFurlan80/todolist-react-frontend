@@ -8,7 +8,7 @@ export class GetUser implements IGetUser {
     private readonly url: string
   ) {}
 
-  async get(): Promise<User> {
+  async get(): Promise<User[]> {
     let response = await this.http.request({
       url: this.url,
       method: "get",
