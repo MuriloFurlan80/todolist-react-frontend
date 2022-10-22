@@ -1,13 +1,7 @@
 export type User = {
-    id: number;
     name: string;
-    phoneNumber: string;
-    avatar: string;
-    status: UserStatus;
+    photo: string;
+    birthday: Date;
+    userId: string;
 }
-export enum UserStatus{
-    online, 
-    busy,
-    away,
-    inative,
-}
+

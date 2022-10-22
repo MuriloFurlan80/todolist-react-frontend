@@ -1,14 +1,17 @@
 {
   "user": [
-    { "id": 1, "name": "Joãozinho" },
-    { "id": 2, "name": "Maria" },
-    { "id": 3, "name": "Heitor" },
-    { "id": 4, "name": "Jorge" },
-    { "id": 5, "name": "Giovana" },
-    { "id": 6, "name": "Rodrigo" },
-    { "id": 7, "name": "Gustavo" },
-    { "id": 8, "name": "Pamela" },
-    { "id": 9, "name": "Mario" },
-    { "id": 10, "name": "Paulo" }
+    {
+      "userId": 1,
+      "name": "Joãozinho",
+      "photo": "https://picsum.photos/200/300",
+      "birthday": "30/12/1992"
+    }
+  ],
+  "auth": [
+    {
+      "id": 1,
+      "email": "joao@email.com",
+      "password": "1234"
+    }
   ]
 }
