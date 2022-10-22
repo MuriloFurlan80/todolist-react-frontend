@@ -10,9 +10,9 @@ export class Signin implements ISignin {
   ) {}
   async signin(data: SigninModel): Promise<Authentication> {
     let response = await this.http.request({
-        url: `${this.url}?email=${data.email}&password=${data.password}`,
-        method: "get"
-    })
+      url: `${this.url}?email=${data.email}&password=${data.password}`,
+      method: "get",
+    });
     return response.body;
   }
 }
