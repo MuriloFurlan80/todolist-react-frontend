@@ -14,8 +14,8 @@ export const App: React.FC<Props> = ({ getuser }) => {
     <>
       {users?.map((x) => {
         return (
-          <div key={x.id}>
-            {x.id}-{x.name}
+          <div key={x.userId}>
+            {x.userId}-{x.name}
           </div>
         );
       })}
