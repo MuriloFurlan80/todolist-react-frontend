@@ -1,5 +1,5 @@
 {
-  "users": [
+  "user": [
     { "id": 1, "name": "Joãozinho" },
     { "id": 2, "name": "Maria" },
     { "id": 3, "name": "Heitor" },
@@ -10,6 +10,5 @@
     { "id": 8, "name": "Pamela" },
     { "id": 9, "name": "Mario" },
     { "id": 10, "name": "Paulo" }
-
   ]
 }
