@@ -5,7 +5,7 @@ import React from "react";
 interface Props {
   getuser: IGetUser;
 }
-export const App: React.FC<Props> = ({ getuser }) => {
+export const Home: React.FC<Props> = ({ getuser }) => {
   const [users, setUsers] = React.useState<User[]>([]);
   React.useEffect(() => {
     getuser.get().then((users) => setUsers([...users]));
