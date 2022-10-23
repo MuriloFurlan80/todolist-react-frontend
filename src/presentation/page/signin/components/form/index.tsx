@@ -1,4 +1,5 @@
 import { SigninModel } from "@/domain/model/auth/signin.model";
+import { ISignin } from "@/domain/usecase/auth/signin.usecase";
 import { AccountCircle, Lock } from "@mui/icons-material";
 import {
   FormControl,
@@ -10,7 +11,11 @@ import {
 } from "@mui/material";
 import React from "react";
 
-export const Form: React.FC = () => {
+interface Props {
+  signin: ISignin;
+}
+
+export const Form: React.FC<Props> = ({ signin }) => {
   const theme = useTheme();
 
   const useFormControls = () => {
@@ -52,15 +57,17 @@ export const Form: React.FC = () => {
       handlerEmail,
       handlerPassword,
       isValid,
+      state,
     };
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (isValid()) {
-      console.log("entrei");
+      signin.signin(state).then((x) => console.log(x));
     }
   };
-  const { handlerEmail, handlerPassword, error, isValid } = useFormControls();
+  const { handlerEmail, handlerPassword, error, isValid, state } =
+    useFormControls();
   return (
     <Box component="form" autoComplete="off" onSubmit={handleSubmit}>
       <FormControl fullWidth variant="filled">

@@ -1,9 +1,14 @@
+import { ISignin } from "@/domain/usecase/auth/signin.usecase";
 import { useTheme, Box, Container, Typography } from "@mui/material";
 import React from "react";
 import { Form } from "./components/form";
 import { Header } from "./components/header";
 
-export const SigninPage: React.FC = () => {
+interface Props {
+  signin: ISignin;
+}
+
+export const SigninPage: React.FC<Props> = ({ signin }) => {
   const theme = useTheme();
   return (
     <React.StrictMode>
@@ -37,7 +42,7 @@ export const SigninPage: React.FC = () => {
               padding: 18,
             }}
           >
-            <Form />
+            <Form signin={signin} />
           </Box>
         </Box>
       </Container>
