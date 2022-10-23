@@ -3,7 +3,9 @@ import React from "react";
 
 export const Header: React.FC = () => {
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static" sx={{
+        height: 72
+    }}>
       <Toolbar>
         <Typography variant="h6" component="span">
           To Do List
