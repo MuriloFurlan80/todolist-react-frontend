@@ -2,7 +2,6 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Slide, Snackbar as Snack } from "@mui/material";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
-import { PropaneSharp } from "@mui/icons-material";
 
 export interface SnackbarProps {
   handleClick: () => void;
