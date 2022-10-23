@@ -1,19 +1,6 @@
-import { AccountCircle, Lock } from "@mui/icons-material";
-import {
-  useTheme,
-  Box,
-  Container,
-  Typography,
-  FormControl,
-  FormGroup,
-  TextField,
-  Button,
-  InputLabel,
-  OutlinedInput,
-  InputAdornment,
-  FilledInput,
-} from "@mui/material";
+import { useTheme, Box, Container, Typography } from "@mui/material";
 import React from "react";
+import { Form } from "./components/form";
 import { Header } from "./components/header";
 
 export const SigninPage: React.FC = () => {
@@ -50,51 +37,7 @@ export const SigninPage: React.FC = () => {
               padding: 18,
             }}
           >
-            <FormControl fullWidth variant="filled">
-              <InputLabel htmlFor="email">Email</InputLabel>
-              <FilledInput
-                size="medium"
-                id="email"
-                startAdornment={
-                  <InputAdornment position="start">
-                    <AccountCircle
-                      sx={{
-                        color: theme.palette.action.disabled,
-                      }}
-                    />
-                  </InputAdornment>
-                }
-              />
-            </FormControl>
-            <FormControl fullWidth variant="filled">
-            <InputLabel htmlFor="password">Password</InputLabel>
-              <FilledInput
-                size="medium"
-                id="password"
-                startAdornment={
-                  <InputAdornment position="start">
-                    <Lock
-                      sx={{
-                        color: theme.palette.action.disabled,
-                      }}
-                    />
-                  </InputAdornment>
-                }
-              />
-            </FormControl>
-            <Box>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                  size="medium"
-                  sx={{
-                    mt: 6,
-                  }}
-                >
-                  Submit
-                </Button>
-              </Box>
+            <Form />
           </Box>
         </Box>
       </Container>
