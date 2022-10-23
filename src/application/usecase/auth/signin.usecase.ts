@@ -13,6 +13,6 @@ export class Signin implements ISignin {
       url: `${this.url}?email=${data.email}&password=${data.password}`,
       method: "get",
     });
-    return response.body;
+    return response.body[0];
   }
 }
