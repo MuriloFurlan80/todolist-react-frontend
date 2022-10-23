@@ -7,11 +7,9 @@
       "birthday": "30/12/1992"
     }
   ],
-  "auth": [
-    {
-      "id": 1,
-      "email": "joao@email.com",
-      "password": "1234"
-    }
-  ]
+  "auth": {
+    "id": 1,
+    "email": "joao@email.com",
+    "password": "1234"
+  }
 }
