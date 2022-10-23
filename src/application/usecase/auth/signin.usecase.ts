@@ -14,6 +14,5 @@ export class Signin implements ISignin {
       method: "get",
     });
     return response.body[0];
-    
   }
 }
