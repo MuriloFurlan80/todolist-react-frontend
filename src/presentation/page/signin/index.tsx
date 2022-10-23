@@ -1,5 +1,6 @@
 import React from "react";
+import { Header } from "./components/header";
 
 export const SigninPage: React.FC = () => {
-  return <h1>Signin</h1>;
+  return <Header />;
 };
