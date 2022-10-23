@@ -1,6 +1,7 @@
 import { User } from "@/domain/entity/user";
 import { IGetUser } from "@/domain/usecase/user/get-user.usecase";
 import React from "react";
+import { Header } from "./componentes/header";
 
 interface Props {
   getuser: IGetUser;
@@ -11,14 +12,6 @@ export const Home: React.FC<Props> = ({ getuser }) => {
     getuser.get().then((users) => setUsers([...users]));
   }, [users.length]);
   return (
-    <>
-      {users?.map((x) => {
-        return (
-          <div key={x.userId}>
-            {x.userId}-{x.name}
-          </div>
-        );
-      })}
-    </>
+   <Header />
   );
 };
