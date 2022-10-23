@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@mui/material";
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useFormControls } from "./componet/formcontrol";
 
 interface Props {
@@ -22,6 +23,7 @@ interface Props {
 export const Form: React.FC<Props> = ({ signin, cache }) => {
   const theme = useTheme();
   const ref = React.useRef<SnackbarProps>(null);
+  const navigate = useNavigate();
   const [stateSnackbar, setStateSnackbar] = React.useState({} as any);
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -33,6 +35,7 @@ export const Form: React.FC<Props> = ({ signin, cache }) => {
             message: "Logged in Successfully",
             type: "success",
           });
+          navigate("/home");
         } else {
           setStateSnackbar({
             message: "User or Password is invalid",
