@@ -1,4 +1,5 @@
-import { createTheme, ThemeProvider } from "@mui/material";
+import { Css } from "@mui/icons-material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 
 interface Props {
@@ -16,5 +17,12 @@ export const ThemeContext: React.FC<Props> = ({ children }) => {
       },
     },
   });
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    </React.Fragment>
+  );
 };
