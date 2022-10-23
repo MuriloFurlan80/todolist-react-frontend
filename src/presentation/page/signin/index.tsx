@@ -1,14 +1,17 @@
 import { ISignin } from "@/domain/usecase/auth/signin.usecase";
+import { ICache } from "@/infra/cache/cache-adapter";
 import { useTheme, Box, Container, Typography } from "@mui/material";
 import React from "react";
 import { Form } from "./components/form";
 import { Header } from "./components/header";
 
+
 interface Props {
   signin: ISignin;
+  cache: ICache;
 }
 
-export const SigninPage: React.FC<Props> = ({ signin }) => {
+export const SigninPage: React.FC<Props> = ({ signin, cache }) => {
   const theme = useTheme();
   return (
     <React.StrictMode>
@@ -42,7 +45,7 @@ export const SigninPage: React.FC<Props> = ({ signin }) => {
               padding: 18,
             }}
           >
-            <Form signin={signin} />
+            <Form signin={signin} cache={cache} />
           </Box>
         </Box>
       </Container>

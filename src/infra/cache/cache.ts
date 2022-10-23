@@ -1,7 +1,7 @@
 import { ICache } from "./cache-adapter";
 
-export class Cache<T> implements ICache<T> {
-  get(key: string): T {
+export class Cache implements ICache {
+  get(key: string): object {
     return JSON.parse(localStorage.get(key));
   }
   set(key: string, value: object) {

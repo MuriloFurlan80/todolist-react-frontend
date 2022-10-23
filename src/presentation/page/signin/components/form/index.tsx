@@ -1,5 +1,6 @@
 import { SigninModel } from "@/domain/model/auth/signin.model";
 import { ISignin } from "@/domain/usecase/auth/signin.usecase";
+import { ICache } from "@/infra/cache/cache-adapter";
 import { AccountCircle, Lock } from "@mui/icons-material";
 import {
   FormControl,
@@ -14,15 +15,16 @@ import { useFormControls } from "./componet/formcontrol";
 
 interface Props {
   signin: ISignin;
+  cache: ICache;
 }
 
-export const Form: React.FC<Props> = ({ signin }) => {
+export const Form: React.FC<Props> = ({ signin, cache }) => {
   const theme = useTheme();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (isValid()) {
-      signin.signin(state).then((x) => console.log(x));
+      signin.signin(state).then((x) => cache.set("user",x));
     }
   };
   const { handlerEmail, handlerPassword, error, isValid, state } =
