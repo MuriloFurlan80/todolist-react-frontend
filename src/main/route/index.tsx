@@ -1,4 +1,4 @@
-import { App } from "@/presentation/page/app";
+import { App } from "@/presentation/page/home";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { makeGetUserFactory } from "../factory/application/user/get-user.factory";
